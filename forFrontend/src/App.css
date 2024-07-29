@@ -1,0 +1,338 @@
+/* Global styles */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+/* Navbar styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9a52e7;
+  padding: 1rem;
+}
+
+nav h1 {
+  color: white;
+  margin: 0;
+}
+
+nav div {
+  display: flex;
+}
+
+nav div a {
+  color: #7E22CE;
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-weight: 700;
+  width: 72px;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+
+}
+
+nav div a:hover {
+  background-color: rgb(187, 180, 180);
+}
+
+/* Home page styles */
+.workoutDetails h1 {
+  color: #7E22CE;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  font-size: 2.3rem;
+}
+
+.workoutDetails {
+  width: 70%;
+}
+
+.home {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.workouts {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.workout-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.workout-card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #7E22CE;
+  font-weight: bold;
+}
+
+.workout-card p {
+  margin: 0.5rem 0;
+  color: #8051a8;
+}
+
+/* AddWorkout styles */
+.addingWorkout {
+  position: absolute;
+  right: 2rem;
+  width: 300px;
+}
+
+.fill {
+  background-color: #f9f9f9;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0.5rem auto;
+}
+
+.fill label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #7E22CE;
+}
+
+.fill input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #7E22CE;
+  outline: none;
+}
+
+.fill button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #7E22CE;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fill button:hover {
+  background-color: #7b47a9;
+}
+
+.fill .error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.workouts button {
+  display: inline-block;
+  padding: 8px;
+  background-color: #7E22CE;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Forum styles */
+.forum h1 {
+  color: #7E22CE;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.errorField {
+  border: 1px solid red;
+}
+
+.notError {
+  border: 1px solid #7E22CE;
+}
+
+/* Forms styles */
+.signup, .login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.signup h1, .login h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #7E22CE;
+}
+
+.signupForm, .loginForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30vh;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signupForm label, .loginForm label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #7b47a9;
+}
+
+.signupForm input, .loginForm input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #7E22CE;
+  outline: none;
+  color: #7E22CE;
+}
+
+.signupForm button, .loginForm button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7E22CE;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signupForm button:hover, .loginForm button:hover {
+  background-color: #944dd3;
+}
+
+.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+  border: 1px solid red;
+}
+
+/* Logout button */
+.btnLogout button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btnLogout button:hover {
+  background-color: #d32f2f;
+}
+
+/* Email display */
+.email {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Media Queries */
+@media (max-width: 1084px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .workouts {
+    grid-template-columns: 1fr;
+  }
+
+  .workoutDetails {
+    width: 100%;
+  }
+
+  .addingWorkout {
+    position: relative;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .signupForm, .loginForm {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav div a {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .workouts {
+    gap: 0.5rem;
+  }
+
+  .workout-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fill {
+    padding: 1rem;
+  }
+}
+.navBTN link{
+    max-width: 77px;
+}
